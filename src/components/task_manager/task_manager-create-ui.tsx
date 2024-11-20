@@ -83,7 +83,7 @@ export function TaskManagerCreate({
       toast.error("Max length exceeds !");
     }
   };
-
+  console.log("HI");
   return (
     <div className="flex flex-col items-center justify-center p-6 sm:p-10 bg-gray-100 rounded-lg shadow-md max-w-md mx-auto my-2">
       <input

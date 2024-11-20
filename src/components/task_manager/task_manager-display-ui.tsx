@@ -18,15 +18,16 @@ export function TaskListDisplay() {
     if (!accountsTasks.isLoading && !accountsTasks.data) {
       accountsTasks.refetch();
     }
-    accountsTasks.data &&
-      setTasks(
-        accountsTasks.data.filter(
-          (element) =>
-            element.account.owner.toBase58() === publicKey?.toBase58()
-        )
-      );
-  }, [accountsTasks.data, accountsTasks.data?.length]);
+  }, [accountsTasks.isLoading, accountsTasks.data]);
 
+  useEffect(() => {
+    if (accountsTasks.data && publicKey) {
+      const filteredTasks = accountsTasks.data.filter(
+        (element) => element.account.owner.toBase58() === publicKey.toBase58()
+      );
+      setTasks(filteredTasks);
+    }
+  }, [accountsTasks.data, publicKey]);
   if (accountsTasks.isLoading) {
     return (
       <div className="w-full h-[calc(100vh-200px)] flex justify-center items-center">
@@ -48,7 +49,7 @@ export function TaskListDisplay() {
       ) : (
         <div className="w-full h-96 flex justify-center items-center">
           <span>
-            You Don't have any tasks !{" "}
+            You donot have any tasks !
             <Link href="/task_manager" className="text-yellow-400">
               Create One
             </Link>
@@ -128,7 +129,7 @@ export function TaskList({ tasks }: { tasks: ITasks[] }) {
           .sort((a, b) => {
             const dateA = new Date(readableDate(a.account.addedDate)).getTime();
             const dateB = new Date(readableDate(b.account.addedDate)).getTime();
-            return dateB - dateA; // Sort by descending order (latest first)
+            return dateB - dateA;
           })
           .map((task) => {
             const {

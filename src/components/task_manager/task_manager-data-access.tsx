@@ -12,7 +12,6 @@ import toast from "react-hot-toast";
 import { useCluster } from "../cluster/cluster-data-access";
 import { useAnchorProvider } from "../solana/solana-provider";
 import { useTransactionToast } from "../ui/ui-layout";
-import { BN } from "bn.js";
 import { useRouter } from "next/navigation";
 import { ITask } from "./types";
 
