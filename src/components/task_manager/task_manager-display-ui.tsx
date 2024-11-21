@@ -112,14 +112,14 @@ export function TaskList({ tasks }: { tasks: ITasks[] }) {
     new Date(Math.floor(givenDate.toNumber() * 1000));
 
   return (
-    <div className="p-6 sm:p-10 bg-gray-700 h-[calc(100vh-150px)] mt-4 rounded-lg overflow-y-auto">
+    <div className="p-2 md:p-6 sm:p-10 bg-gray-700  mt-24 md:mt-2 rounded-lg overflow-y-auto">
       <div className=" relative flex items-center mb-8">
-        <div className="text-4xl  font-bold text-center flex-1 ">
+        <div className="text-xl md:text-4xl  font-bold text-center flex-1 ">
           <div className="">Task List</div>
         </div>
         <Link
           href="/task_manager"
-          className=" absolute right-0 font-semibold border-2 border-green-500 bg-green-400 px-2 py-0.5 rounded-md text-gray-600 transition-all hover:bg-green-500 hover:border-green-600 hover:text-gray-800 active:scale-95"
+          className="text-xs md:text-lg absolute right-0 font-semibold border-2 border-green-500 bg-green-400 px-2 py-0.5 rounded-md text-gray-600 transition-all hover:bg-green-500 hover:border-green-600 hover:text-gray-800 active:scale-95"
         >
           Add +
         </Link>
@@ -149,7 +149,7 @@ export function TaskList({ tasks }: { tasks: ITasks[] }) {
                 }}
               >
                 <h2 className="text-xl font-semibold mb-2">{title}</h2>
-                <div className="text-gray-600 mb-4 h-24  w-96 py-2 overflow-y-auto custom-scrollbar">
+                <div className="text-gray-600 mb-4 h-24  md:w-96 py-2 overflow-y-auto custom-scrollbar">
                   {description}
                 </div>
                 <div className="text-sm text-gray-500 mb-4">
@@ -192,9 +192,11 @@ export function TaskList({ tasks }: { tasks: ITasks[] }) {
                     )}
                   </button>
                   <button
-                    disabled={completeEntry.isPending}
+                    disabled={
+                      completeEntry.isPending || task.account.isComplete
+                    }
                     onClick={() => handleComplete(task.account)}
-                    className={`px-4 py-2 h-10 w-48 ${
+                    className={`px-1 md:px-4 py-2 h-10 w-48 ${
                       isComplete
                         ? "bg-green-500"
                         : "bg-blue-500 hover:bg-blue-600"
@@ -208,7 +210,7 @@ export function TaskList({ tasks }: { tasks: ITasks[] }) {
                     ) : isComplete ? (
                       "Completed"
                     ) : (
-                      "Mark as Completed"
+                      "Mark Done"
                     )}
                   </button>
                 </div>

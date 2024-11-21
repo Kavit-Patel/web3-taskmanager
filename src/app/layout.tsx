@@ -13,7 +13,7 @@ const links: { label: string; path: string }[] = [
   // { label: "Account", path: "/account" },
   { label: "Clusters", path: "/clusters" },
   { label: "Add Task", path: "/task_manager" },
-  { label: "Tasks List", path: "/all_tasks" },
+  { label: "Tasks", path: "/all_tasks" },
 ];
 
 export default function RootLayout({
@@ -23,6 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      />
       <body>
         <ReactQueryProvider>
           <ClusterProvider>

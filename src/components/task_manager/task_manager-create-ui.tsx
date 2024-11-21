@@ -83,19 +83,18 @@ export function TaskManagerCreate({
       toast.error("Max length exceeds !");
     }
   };
-  console.log("HI");
   return (
-    <div className="flex flex-col items-center justify-center p-6 sm:p-10 bg-gray-100 rounded-lg shadow-md max-w-md mx-auto my-2">
+    <div className="flex flex-col items-center justify-center p-1 md:p-6  bg-gray-100 rounded-lg shadow-md max-w-md mx-auto my-2">
       <input
         disabled={operation === "editing"}
         title={operation === "editing" ? "Can't edit due to PDA contraint" : ""}
         type="text"
-        placeholder="Task title - once created wouldn't be able to edit"
+        placeholder="Task title"
         value={task}
         maxLength={32}
         onInput={(e) => warning(e, "title")}
         onChange={(e) => setTask(e.target.value)}
-        className={`w-full p-3 mb-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 ${
+        className={`w-full px-1 md:px-3 py-3 mb-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 ${
           operation === "editing" ? "text-black" : ""
         }`}
       />
@@ -106,22 +105,22 @@ export function TaskManagerCreate({
         maxLength={190}
         onInput={(e) => warning(e, "description")}
         onChange={(e) => setDescription(e.target.value)}
-        className="w-full p-3 mb-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+        className="w-full px-1.5 md:px-3 py-3 mb-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
       />
       <input
         type="text"
-        placeholder="Priority - 1-Highest | 2-Medium | 3-Low"
+        placeholder="Priority 1-High | 2-Med | 3-Low"
         value={priority}
         onChange={(e) => setPriority(e.target.value)}
-        className="w-full p-3 mb-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+        className="w-full px-1.5 md:px-3 py-3 mb-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
       />
-      <div className="w-full mb-3">
+      <div className="w-full flex bg-black mb-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300">
         <DatePicker
           selected={dueDate}
           onChange={(date) => setDueDate(date)}
           dateFormat="MMMM d, yyyy"
           placeholderText="Select a due date"
-          className=" w-[23rem] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+          className=" px-1.5 md:px-3 py-3 "
         />
       </div>
       <button
