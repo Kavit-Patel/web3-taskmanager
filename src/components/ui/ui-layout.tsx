@@ -26,7 +26,7 @@ export function UiLayout({
   const [menu, showMenu] = React.useState<boolean>(false);
 
   return (
-    <div className="h-full flex flex-col mx-auto min-h-screen">
+    <div className=" flex flex-col mx-auto h-screen">
       <div className="navbar bg-base-300 text-neutral-content md:flex-row space-y-2 md:space-y-0">
         <div className="h-full">
           <Link

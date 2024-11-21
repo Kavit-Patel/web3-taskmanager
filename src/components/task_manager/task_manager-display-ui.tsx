@@ -112,7 +112,7 @@ export function TaskList({ tasks }: { tasks: ITasks[] }) {
     new Date(Math.floor(givenDate.toNumber() * 1000));
 
   return (
-    <div className="p-2 md:p-6 sm:p-10 bg-gray-700  mt-24 md:mt-2 rounded-lg overflow-y-auto">
+    <div className="p-2 md:p-6 sm:p-10 bg-gray-700  mt-24 md:mt-0 rounded-lg h-[calc(100vh-130px)] overflow-y-auto">
       <div className=" relative flex items-center mb-8">
         <div className="text-xl md:text-4xl  font-bold text-center flex-1 ">
           <div className="">Task List</div>

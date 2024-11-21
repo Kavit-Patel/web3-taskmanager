@@ -25,7 +25,7 @@ export default function TaskManagerFeature() {
     return null;
   });
   return publicKey ? (
-    <div className="w-full mt-24">
+    <div className="w-full mt-24 md:mt-0">
       <AppHero
         title="TaskManager"
         subtitle={
