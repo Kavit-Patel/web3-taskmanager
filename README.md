@@ -1,94 +1,129 @@
-# task_manager
+# **Web3 Task Manager**
 
-## Getting Started
+[![Deployed on Vercel]](https://web3-taskmanager.vercel.app/)  
+[![Solana Devnet](https://img.shields.io/badge/Blockchain-Solana%20Devnet-9945FF)](https://solana.com/)
 
-### Prerequisites
+---
 
-- Node v18.18.0 or higher
+### **🚀 Live Demo**
 
-- Rust v1.77.2 or higher
-- Anchor CLI 0.30.1 or higher
-- Solana CLI 1.18.17 or higher
+👉 [Visit the Web3 Task Manager](https://web3-taskmanager.vercel.app/)
 
-### Installation
+---
 
-#### Clone the repo
+## **📋 Features**
 
-```shell
-git clone <repo-url>
-cd <repo-name>
-```
+- **🔗 Blockchain Integration**
 
-#### Install Dependencies
+  - Tasks are securely stored on the **Solana blockchain's Devnet**, ensuring immutability and transparency.
 
-```shell
-pnpm install
-```
+- **🔐 Web3 Authentication**
 
-#### Start the web app
+  - Users connect their Solana wallet (e.g., Phantom) to manage tasks. No traditional sign-ups required!
 
-```
-pnpm dev
-```
+- **📂 Task Management**
 
-## Apps
+  - Add, update, and delete tasks with real-time blockchain updates.
 
-### anchor
+- **🌍 Fully Decentralized**
 
-This is a Solana program written in Rust using the Anchor framework.
+  - Powered by Solana smart contracts, eliminating reliance on centralized databases.
 
-#### Commands
+- **📱 Responsive UI**
+  - Optimized for both desktop and mobile devices.
 
-You can use any normal anchor commands. Either move to the `anchor` directory and run the `anchor` command or prefix the command with `pnpm`, eg: `pnpm anchor`.
+---
 
-#### Sync the program id:
+## **🛠️ Tech Stack**
 
-Running this command will create a new keypair in the `anchor/target/deploy` directory and save the address to the Anchor config file and update the `declare_id!` macro in the `./src/lib.rs` file of the program.
+### **Frontend**
 
-You will manually need to update the constant in `anchor/lib/counter-exports.ts` to match the new program id.
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-```shell
-pnpm anchor keys sync
-```
+### **Blockchain**
 
-#### Build the program:
+- **Platform:** [Solana Devnet](https://solana.com/)
+- **Smart Contract Framework:** [Anchor](https://project-serum.github.io/anchor/)
 
-```shell
-pnpm anchor-build
-```
+### **Deployment**
 
-#### Start the test validator with the program deployed:
+- [Vercel](https://vercel.com/)
 
-```shell
-pnpm anchor-localnet
-```
+---
 
-#### Run the tests
+## **⚙️ Getting Started**
 
-```shell
-pnpm anchor-test
-```
+### **1. Prerequisites**
 
-#### Deploy to Devnet
+Ensure the following are installed:
 
-```shell
-pnpm anchor deploy --provider.cluster devnet
-```
+- [Node.js](https://nodejs.org/)
+- [Solana CLI](https://docs.solana.com/cli/install-solana-cli)
+- [Phantom Wallet](https://phantom.app/)
 
-### web
+---
 
-This is a React app that uses the Anchor generated client to interact with the Solana program.
+### **2. Clone the Repository**
 
-#### Commands
+```bash
+git clone https://github.com/Kavit-Patel/web3-taskmanager.git
+cd web3-taskmanager
+3. Install Dependencies
+npm install
+4. Run the Project Locally
+npm start
+Visit http://localhost:3000 in your browser.
 
-Start the web app
+🛡️ Smart Contract
+Key Details
+Network: Solana Devnet
+Functionality:
+Decentralized task management.
+Immutable on-chain task data.
 
-```shell
-pnpm dev
-```
+📊 How It Works
+Connect Wallet:
+Use your Solana wallet to authenticate.
 
-Build the web app
+Perform Task Operations:
+Add, update, and delete tasks directly from the UI.
 
-```shell
-pnpm build
+On-Chain Storage:
+Task data is recorded on Solana’s Devnet, ensuring decentralization and immutability.
+
+📚 Project aims ✅ Completed
+Web3 integration with Solana Devnet.
+Decentralized task management UI.
+Wallet-based authentication.
+
+🔮 Future Enhancements
+NestJS Backend:
+Add a robust backend using NestJS to support advanced task management features and store data on database also.
+Notifications: Push notifications for task deadlines.
+
+📦 Deployment
+The project is live at:
+👉 https://web3-taskmanager.vercel.app/
+
+🤝 Contributing
+Contributions are welcome! Follow these steps:
+
+Fork the repository.
+Create a feature branch:
+git checkout -b feature-name
+Commit your changes
+git commit -m "Add feature-name"
+Push to your branch:
+git push origin feature-name
+Open a pull request.
+
+📄 License
+This project is licensed under the MIT License.
+
+📞 Contact
+Author: Kavit Patel - kvpatel.er@gmail.com
+WhatsApp: +917383737392
+GitHub: https://github.com/Kavit-Patel/
+Live Project: https://web3-taskmanager.vercel.app/
 ```
