@@ -21,7 +21,7 @@ export function getTaskManagerProgramId(cluster: Cluster) {
     case "devnet":
     case "testnet":
       // This is the program ID for the TaskManager program on devnet and testnet.
-      return new PublicKey("D82UX2KFbcu9ztdkSE4GTYwuWNoGmDRupjQVJ1b9bodj");
+      return new PublicKey("LmKARybxpp3RuR2xMjiL4yWNzjLJPsfgrH7GFxjRVPe");
     case "mainnet-beta":
     default:
       return TASK_MANAGER_PROGRAM_ID;

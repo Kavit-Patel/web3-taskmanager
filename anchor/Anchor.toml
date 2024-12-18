@@ -6,13 +6,13 @@ resolution = true
 skip-lint = false
 
 [programs.devnet]
-task_manager = "D82UX2KFbcu9ztdkSE4GTYwuWNoGmDRupjQVJ1b9bodj"
+task_manager = "LmKARybxpp3RuR2xMjiL4yWNzjLJPsfgrH7GFxjRVPe"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "devnet"
+cluster = "Devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]

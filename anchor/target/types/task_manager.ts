@@ -5,7 +5,7 @@
  * IDL can be found at `target/idl/task_manager.json`.
  */
 export type TaskManager = {
-  "address": "D82UX2KFbcu9ztdkSE4GTYwuWNoGmDRupjQVJ1b9bodj",
+  "address": "LmKARybxpp3RuR2xMjiL4yWNzjLJPsfgrH7GFxjRVPe",
   "metadata": {
     "name": "taskManager",
     "version": "0.1.0",
